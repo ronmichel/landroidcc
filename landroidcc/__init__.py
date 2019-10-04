@@ -108,6 +108,15 @@ class Landroid(object):
         self._send_command('{"cmd": 3}')
         log.info("Command sent: Go Home")
 
+    def set_raindelay(self):
+        """
+        Set the mower rain delay
+
+        :return: None
+        """
+        self._send_command('{sc: {p: 90}}')
+        log.info("Rain delay set")        
+
     def _send_command(self, cmd):
         self._mqtt_client.publish(self._mqtt_topic_in, cmd)
 
