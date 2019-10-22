@@ -311,7 +311,8 @@ class LandroidStatus(object):
         13: "Reverse wire",
         14: "Charge error",
         15: "Timeout finding home"
-
+        16: "Locked"
+        17: "Overheated"
     }
 
     def __init__(self, inputraw):
